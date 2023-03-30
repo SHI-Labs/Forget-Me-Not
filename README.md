@@ -11,7 +11,10 @@ This repo contains the code for our paper **Forget-Me-Not: Learning to Forget in
 
 #### Features
 
-- Forget-Me-Not is ...
+- Forget-Me-Not is a plug-and-play, efficient and effective concept forgetting and correction method for large-scale text-to-image models.
+- It provides an efficient way to forget specific concepts with as few as 35 optimization steps, which typically takes about 30 seconds.
+- It can be easily adapted as lightweight patches for Stable Diffusion, allowing for multi-concept manipulation and convenient distribution.
+- Novel attention resteering loss demonstrates that pretrained models can be further finetuned solely with self-supervised signals, i.e. attention scores.
 
 ![Forget-Me-Not](images/attn-resteering.png)
 
