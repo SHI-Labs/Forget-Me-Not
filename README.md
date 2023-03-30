@@ -13,7 +13,7 @@ This repo contains the code for our paper **Forget-Me-Not: Learning to Forget in
 
 - Forget-Me-Not is ...
 
-![Forget-Me-Not](images/forget-me-not.png)
+![Forget-Me-Not](images/attn-resteering.png)
 
 ## News
 
@@ -21,7 +21,7 @@ This repo contains the code for our paper **Forget-Me-Not: Learning to Forget in
 
 ## Results
 
-![Concept-Forgetting-Results](images/concept-forgetting-resutls.png)
+![Concept-Forgetting-Results](images/extra-results.png)
 
 ## Citation
 
