@@ -3,7 +3,7 @@
 
 <sup>&dagger;</sup> Equal Contribution
 
-[[`arXiv`]()] [[`pdf`]()]
+[[`arXiv`](https://arxiv.org/abs/2303.17591)] [[`pdf`](https://arxiv.org/pdf/2303.17591.pdf)]
 
 This repo contains the code for our paper **Forget-Me-Not: Learning to Forget in Text-to-Image Diffusion Models**.
 
@@ -38,7 +38,12 @@ We hope our research and open-source here encourage future research in this crit
 If you found Forget-Me-Not useful in your research, please consider starring ⭐ us on GitHub and citing 📚 us in your research!
 
 ```bibtex
-
+@article{zhang2023forgetmenot,
+      title={Forget-Me-Not: Learning to Forget in Text-to-Image Diffusion Models}, 
+      author={Eric Zhang and Kai Wang and Xingqian Xu and Zhangyang Wang and Humphrey Shi},
+      journal={arXiv preprint arXiv:2211.08332},
+      year={2023}
+}
 ```
 
 ## Acknowledgement
