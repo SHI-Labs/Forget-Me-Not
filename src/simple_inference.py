@@ -50,6 +50,7 @@ def main(args):
         )
         pipe.scheduler = EulerAncestralDiscreteScheduler.from_config(pipe.scheduler.config)                    
         for c, t in args.multi_concept:
+            c = c.replace('-', ' ')
             if t == "object":
                 prompts += [f"a photo of {c}"]
             elif t == "style":
@@ -64,6 +65,7 @@ def main(args):
     os.makedirs(output_folder, exist_ok=True)
 
     for prompt in prompts:
+        print(f'Inferencing: {prompt}')
         images = pipe(prompt, num_inference_steps=50, guidance_scale=7, num_images_per_prompt=8).images
         for i, im in enumerate(images):
             im.save(f"{output_folder}/o_{prompt.replace(' ', '-')}_{i}.jpg")  

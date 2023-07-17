@@ -1,11 +1,11 @@
 Ti:
   # <<< primary settings <<<
-  instance_data_dir: data/taylor-swift
-  output_dir: exps_ti/taylor-swift
+  instance_data_dir: data/elon-musk
+  output_dir: exps_ti/elon-musk
   use_template: object
   placeholder_tokens: <s1>|<s2>|<s3>|<s4>
   placeholder_token_at_data: <s>|<s1><s2><s3><s4>
-  initializer_tokens: taylor|swift|<rand-1>|<rand-1>  
+  initializer_tokens: elon|musk|<rand-1>|<rand-1>  
   train_batch_size: 1
   learning_rate_ti: 0.001
   max_train_steps_ti: 500
