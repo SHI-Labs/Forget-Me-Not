@@ -1,0 +1,54 @@
+Ti:
+  # <<< primary settings <<<
+  instance_data_dir: data/taylor-swift
+  output_dir: exps_ti/taylor-swift
+  use_template: object
+  placeholder_tokens: <s1>|<s2>|<s3>|<s4>
+  placeholder_token_at_data: <s>|<s1><s2><s3><s4>
+  initializer_tokens: taylor|swift|<rand-1>|<rand-1>  
+  train_batch_size: 1
+  learning_rate_ti: 0.001
+  max_train_steps_ti: 500
+  # >>> primary settings >>>
+  
+  pretrained_model_name_or_path: stabilityai/stable-diffusion-2-1-base
+  train_text_encoder: false
+  pretrained_vae_name_or_path: null
+  revision: null
+  class_data_dir: null
+  stochastic_attribute: null
+  perform_inversion: true
+  class_prompt: null
+  with_prior_preservation: false
+  prior_loss_weight: 1.0
+  num_class_images: 100
+  seed: 42
+  resolution: 512
+  color_jitter: false
+  sample_batch_size: 1
+  max_train_steps_tuning: 1000
+  save_steps: 100
+  gradient_accumulation_steps: 1
+  gradient_checkpointing: false
+  mixed_precision: fp16
+  lora_rank: 4
+  clip_ti_decay: true
+  learning_rate_unet: 0.0003
+  learning_rate_text: 0.0003
+  continue_inversion: true
+  continue_inversion_lr: 0.0001
+  use_face_segmentation_condition: false
+  scale_lr: false
+  lr_scheduler: constant
+  lr_warmup_steps: 100
+  lr_scheduler_lora: linear
+  lr_warmup_steps_lora: 0
+  weight_decay_ti: 0.1
+  weight_decay_lora: 0.001
+  use_8bit_adam: false
+  device: cuda:0
+  extra_args: null
+  log_wandb: false
+  wandb_log_prompt_cnt: 10
+  wandb_project_name: new_pti_project
+  wandb_entity: new_pti_entity

@@ -1,0 +1,57 @@
+Attn:
+  # >>> primary settings >>>
+  multi_concept:
+    - [elon-musk, object]  
+  output_dir: exps_attn/elon-musk  
+  use_ti: true
+  only_optimize_ca: false
+  use_pooler: true  
+  train_batch_size: 1
+  learning_rate: 2.0e-06
+  max_train_steps: 35
+  # <<< primary settings <<<
+  
+  pretrained_model_name_or_path: stabilityai/stable-diffusion-2-1-base
+  revision: null
+  tokenizer_name: null
+  class_data_dir: null
+  instance_prompt: null
+  concept_keyword: null
+  no_real_image: false
+  class_prompt: null
+  with_prior_preservation: false
+  prior_loss_weight: 1.0
+  num_class_images: 20
+  seed: null
+  resolution: 512
+  center_crop: false
+  train_text_encoder: false
+  sample_batch_size: 4
+  num_train_epochs: 1
+  checkpointing_steps: 500
+  resume_from_checkpoint: null
+  gradient_accumulation_steps: 1
+  gradient_checkpointing: false
+  scale_lr: false
+  lr_scheduler: constant
+  lr_warmup_steps: 0
+  lr_num_cycles: 1
+  lr_power: 1.0
+  use_8bit_adam: false
+  dataloader_num_workers: 0
+  adam_beta1: 0.9
+  adam_beta2: 0.999
+  adam_weight_decay: 0.01
+  adam_epsilon: 1.0e-08
+  max_grad_norm: 1.
+  push_to_hub: false
+  hub_token: null
+  hub_model_id: null
+  logging_dir: logs
+  allow_tf32: false
+  report_to: tensorboard
+  mixed_precision: null
+  prior_generation_precision: null
+  local_rank: -1
+  enable_xformers_memory_efficient_attention: false
+  set_grads_to_none: false

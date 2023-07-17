@@ -1,0 +1,4 @@
+diffusers>=0.13.0
+git+https://github.com/cloneofsimo/lora.git # version 0.1.7  
+omegaconf
+accelerate>=0.16.0
