@@ -30,6 +30,8 @@ from transformers import AutoTokenizer, PretrainedConfig
 from typing import Callable, Dict, List, Optional, Set, Tuple, Type, Union, Any
 import re
 import json
+from accelerate.utils import ProjectConfiguration
+
 
 logger = get_logger(__name__)
 
@@ -185,11 +187,16 @@ def collate_fn(examples, with_prior_preservation=False):
 def main(args):
     logging_dir = Path(args.output_dir, args.logging_dir)
 
+    if logging_dir is not None:
+        os.makedirs(logging_dir, exist_ok=True)
+
+    accelerator_project_config = ProjectConfiguration(logging_dir=logging_dir)
+
     accelerator = Accelerator(
         gradient_accumulation_steps=args.gradient_accumulation_steps,
         mixed_precision=args.mixed_precision,
         log_with=args.report_to,
-        logging_dir=logging_dir,
+        project_config=accelerator_project_config,
     )
 
     if args.train_text_encoder and args.gradient_accumulation_steps > 1 and accelerator.num_processes > 1:
